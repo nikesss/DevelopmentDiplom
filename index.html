@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
     <title>Каталог ноутбуков</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="container center">
+      <div class="insertInfo">
+        <form id="laptop">
+          <h2>Laptop</h2>
+          <div>
+            <label for="title">Название</label>
+            <input type="text" id="title" value="1" />
+          </div>
+          <div>
+            <label for="ram">Размер ОП</label>
+            <input type="text" id="ram" value="1" />
+          </div>
+          <div>
+            <label for="year">Год выпуска</label>
+            <input type="text" id="year" value="1" />
+          </div>
+          <div>
+            <label for="proccesor">Процессор</label>
+            <input type="text" id="proccesor" value="1" />
+          </div>
+          <div>
+            <label for="countCore">Кол-во ядер</label>
+            <input type="text" id="countCore" value="1" />
+          </div>
+          <div>
+            <label for="material">Материал корпуса</label>
+            <input type="text" id="material" value="1" />
+          </div>
+          <div>
+            <label for="mass">Вес</label>
+            <input type="text" id="mass" value="1" />
+          </div>
+          <div>
+            <input type="submit" value="Добавить в котолог" />
+          </div>
+        </form>
+        <form id="ultrabook">
+          <h2>Ultrabook</h2>
+          <div>
+            <label for="title">Название</label>
+            <input type="text" id="title" />
+          </div>
+          <div>
+            <label for="ram">Размер ОП</label>
+            <input type="text" id="ram" />
+          </div>
+          <div>
+            <label for="year">Год выпуска</label>
+            <input type="text" id="year" />
+          </div>
+          <div>
+            <label for="proccesor">Процессор</label>
+            <input type="text" id="proccesor" />
+          </div>
+          <div>
+            <label for="countCore">Кол-во ядер</label>
+            <input type="text" id="countCore" />
+          </div>
+          <div>
+            <label for="color">Цвет корпуса</label>
+            <input type="text" id="color" />
+          </div>
+          <div>
+            <label for="mass">Вес</label>
+            <input type="text" id="mass" />
+          </div>
+          <div>
+            <input type="submit" value="Добавить в котолог" />
+          </div>
+        </form>
+      </div>
+
+      <div id="list-laptops">
+        <ul class="head_title">
+          <li>Название</li>
+          <li>Процессор</li>
+          <li>Кол-во ОЗУ</li>
+          <li>Кол-во ядер</li>
+          <li>Действие</li>
+        </ul>
+      </div>
+    </div>
+    <script src="./script/Laptop.js"></script>
+    <script src="./script/Ultrabook.js"></script>
+    <script src="./script/viewLaptop.js"></script>
+    <script src="./script/viewUltrabook.js"></script>
     <script src="./script/script.js"></script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,35 @@
+.head_title,
+ul {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /* justify-content: space-around; */
+  justify-items: center;
+  border: 1px solid black;
+  list-style: none;
+  width: 100%;
+}
+.container {
+  margin: 0 5%;
+}
+.container .insertInfo {
+  display: flex;
+  justify-content: space-between;
+}
+#list-laptops {
+  width: 100%;
+  margin-top: 50px;
+}
+form div {
+  margin: 10px;
+}
+form h2 {
+  text-align: center;
+  font-size: 20px;
+}
+.no_succes {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.succes {
+  background-color: rgba(0, 128, 0, 0.5);
+}
