@@ -1,4 +1,5 @@
 var count = 0;
+var Arr = [];
 document.querySelector("#laptop").addEventListener("submit", function (event) {
   var title = document.querySelector("#title").value;
   var ramSize = document.querySelector("#ram").value;
@@ -47,11 +48,13 @@ document.querySelector("#laptop").addEventListener("submit", function (event) {
     count++;
   } else {
     count++;
+    Arr.push(laptop);
+
     viewLaptop.addProduct(laptop);
     viewLaptop.getMessage("Новый ноутбук добавлен", "succes");
     viewLaptop.clearInput();
     viewLaptop.deleteProduct();
-    viewLaptop.viewInfo(laptop);
+    viewLaptop.viewInfo(Arr);
   }
 
   event.preventDefault();
@@ -94,6 +97,7 @@ document
       color,
       mass,
     );
+
     var viewUltrabook = new ViewUltrabook();
     if (
       title === "" ||
@@ -113,14 +117,14 @@ document
       viewUltrabook.getMessage("Вес должен быть меньше 1.5-a кг", "no_succes");
       count++;
     } else {
+      Arr.push(ultrabook);
+
       viewUltrabook.addProduct(ultrabook);
       viewUltrabook.getMessage("Новый ноутбук добавлен", "succes");
-
       viewUltrabook.clearInput();
       viewUltrabook.deleteProduct();
-      viewUltrabook.viewInfo(ultrabook);
+      viewUltrabook.viewInfo(Arr);
       count++;
     }
-
     event.preventDefault();
   });

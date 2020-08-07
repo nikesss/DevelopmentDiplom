@@ -1,8 +1,10 @@
 function ViewLaptop() {}
-
+var myWindow;
 ViewLaptop.prototype.addProduct = function (obj) {
   var block = document.querySelector("#list-laptops");
   var ullist = document.createElement("ul");
+
+  ullist.className = "body_title";
   ullist.innerHTML =
     "<li>" +
     obj.title +
@@ -16,8 +18,18 @@ ViewLaptop.prototype.addProduct = function (obj) {
     "<li>" +
     obj.countCores +
     "</li>" +
-    '<li><button class="info">Инфо</button>' +
+    `<li><button class="info">Инфо</button>` +
     '<button id="delete">Удалить</button></li>';
+  ullist.querySelector(".info").addEventListener("click", function () {
+    
+
+    myWindow = window
+      .open("about:blank", "", "width=200,height=200")
+
+      .document.write(`<h1>${obj.toString()}</h1>`);
+
+    
+  });
   block.appendChild(ullist);
 };
 ViewLaptop.prototype.getMessage = function (message, nameCl) {
@@ -33,7 +45,6 @@ ViewLaptop.prototype.getMessage = function (message, nameCl) {
 
 ViewLaptop.prototype.deleteMessage = function () {
   var deleteBlock = document.querySelector("nameCL");
-  
 };
 ViewLaptop.prototype.deleteProduct = function () {
   var a = document.querySelectorAll("ul");
@@ -55,17 +66,12 @@ ViewLaptop.prototype.clearInput = function () {
   document.querySelector("#mass").value = "";
 };
 ViewLaptop.prototype.viewInfo = function (obj) {
-  var a = document.querySelectorAll("ul");
-  for (let i = 0; i < a.length; i++) {
-    a[i].addEventListener("click", function (e) {
-      if (e.target && e.target.className == "info") {
-        var windowWirhInfo = window.open(
-          "about:blank",
-          "hello",
-          "width=200,height=200",
-        );
-        windowWirhInfo.document.write(`<h1>${obj.toString()}</h1>`);
-      }
-    });
-  }
+  // var a = document.querySelectorAll(".body_title");
+  // for (let i = 0; i < a.length; i++) {
+  //   a[i].addEventListener("click", function (e) {
+  //     if (e.target && e.target.className == "info") {
+  //
+  //     }
+  //   });
+  // }
 };
